@@ -1,0 +1,107 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    width: 90%;
+    padding: 20px;
+    background: #fefefe;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Title */
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Video Container */
+.video-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Directional Controls */
+.direction-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.direction-controls .row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.control-btn {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.control-btn:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+
+/* Sliders Panel */
+.slider-panel {
+    margin-top: 20px;
+}
+
+.slider-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.slider-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.slider-group input[type="range"] {
+    width: 100%;
+    appearance: none;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.slider-group input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robotic Car and Arm Control</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Robotic Car and Arm Control</h1>
+
+        <!-- Live Camera Feed -->
+        <div class="video-container">
+            <img src="http://192.168.4.1/stream" alt="Camera Stream">
+        </div>
+
+        <!-- Directional Controls -->
+        <div class="direction-controls">
+            <div class="row">
+                <button class="control-btn" onclick="sendCommand('move', 'forward')">↑</button>
+            </div>
+            <div class="row">
+                <button class="control-btn" onclick="sendCommand('move', 'left')">←</button>
+                <button class="control-btn" onclick="sendCommand('move', 'stop')">■</button>
+                <button class="control-btn" onclick="sendCommand('move', 'right')">→</button>
+            </div>
+            <div class="row">
+                <button class="control-btn" onclick="sendCommand('move', 'backward')">↓</button>
+            </div>
+        </div>
+
+        <!-- Sliders at the Bottom -->
+        <div class="slider-panel">
+            <div class="slider-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="100" onchange="sendCommand('speed', this.value)">
+            </div>
+            <div class="slider-group">
+                <label for="light">Light:</label>
+                <input type="range" id="light" min="0" max="100" onchange="sendCommand('light', this.value)">
+            </div>
+            <div class="slider-group">
+                <label for="base">Base:</label>
+                <input type="range" id="base" min="0" max="180" onchange="sendCommand('base', this.value)">
+            </div>
+            <div class="slider-group">
+                <label for="gripper">Gripper:</label>
+                <input type="range" id="gripper" min="0" max="180" onchange="sendCommand('gripper', this.value)">
+            </div>
+            <div class="slider-group">
+                <label for="shoulder">Shoulder:</label>
+                <input type="range" id="shoulder" min="0" max="180" onchange="sendCommand('shoulder', this.value)">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
